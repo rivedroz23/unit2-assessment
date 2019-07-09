@@ -10,6 +10,7 @@ section {
   border-style: inset;
   width: 40%;
   margin: 2px auto;
+  text-align: center;
 }
 
 form {
@@ -23,4 +24,9 @@ input {
   height: 2em;
   border-radius: 2px;
   margin: 2px;
+  text-align: center;
+}
+
+h1 {
+text-align: center;
 }

@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="/css/style.css">
+<h1>Wacky Widgets</h1>
+
+<% if (widgets.length === 0) { %>
+<h2> No widgets exist</h2> </hr>
+    <% } else { %>
+
+    <% widgets.forEach( function(widget) { %>
+        <li>  <a href ="/<%= widget.id %>" >Description: <%= widget.description %></a></li>
+        <li>  <a href ="/<%= widget.id %>" >Quantity: <%= widget.quantity %></a></li>
+        <form method="POST" action="/<%= widget.id %>/?_method=DELETE">
+            <input type="submit" value="DELETE">
+        
+        </form>
+       <% }); %>
+    </ul>
+    
+    <% } %>
+
+    <h4>Add Widget</h4>
+    
+    <form action="/" method="POST">
+        <input type="text" name="description" placeholder="widget description">
+        <input type="text" name="quantity" placeholder="widget quantity">
+        <input type="submit" value="Add widget">
+        </form>
+  
+
+
